@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{gatos}}
+    
+    <table>
+
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Genero</th>
+                <th>Color</th>
+                <th>Peso</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            {% for gato in gatos %}
+            <tr>
+                <td>{{gato.nombre}}</td>
+                <td>{{gato.raza}}</td>
+                <td>{{gato.edad}}</td>
+                <td>{{gato.Genero}}</td>
+                <td>{{gato.Color}}</td>
+                <td>{{gato.Peso}}</td>
+            </tr>
+
+            {% endfor %}
+            
+        </tbody>
+
+
+
+    </table>
+
+   
+    
+
+
+</body>
+</html>

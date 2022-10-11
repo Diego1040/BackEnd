@@ -8,3 +8,9 @@ from movie.models import *
 admin.site.register(Movie)
 
 admin.site.register(Director)
+
+admin.site.register(Paises)
+
+admin.site.register(Genero)
+
+

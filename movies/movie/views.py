@@ -1,7 +1,9 @@
 from multiprocessing import context
+import re
+from urllib import request
 from django.shortcuts import render
 from .models import Movie, Director
-from .forms import MovieForm
+from .forms import MovieForm, DirectorForm
 
 # Create your views here.
 
@@ -18,12 +20,24 @@ def home(request):
     return render(request, 'movie/templates/index.html', context)
 
 
-def add(request):
-
+def add_movie(request):
     form = MovieForm()
+    context = {
+        'titulo': 'Pelicula',
+        'form': form
+        
+    }
+    
+    return render(request, 'movie/templates/index2.html', context)
 
 
-    return render(request, 'movie/templates/index2.html',
-    {'form' : form}
-    )
 
+def add_director(request):
+    form = DirectorForm()
+    context = {
+        'titulo': 'Director',
+        'form': form
+        
+    }
+    
+    return render(request, 'movie/templates/index2.html', context)

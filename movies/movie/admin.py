@@ -13,4 +13,6 @@ admin.site.register(Paises)
 
 admin.site.register(Genero)
 
+admin.site.register(Actor)
+
 

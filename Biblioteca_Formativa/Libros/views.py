@@ -15,6 +15,7 @@ from django.views.generic.list import ListView
 
 
 class bookListView(ListView):
+    template_name = 'Libros/templates/book_list.html'
     model = Book
 
 def home(request):

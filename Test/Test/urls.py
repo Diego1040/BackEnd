@@ -1,4 +1,4 @@
-"""Biblioteca_Formativa URL Configuration
+"""Test URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Libros.views import *
+from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name=''),
-    path('book_list/', bookListView.as_view(), name='book_list'),
-    path('book_register/', BookCreate.as_view(), name='book_register'),
+    path('book_edit', BookCreate.as_view(), name='book_edit')
 ]
